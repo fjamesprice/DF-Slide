@@ -1,0 +1,32 @@
+project(smooth-movement)
+
+# Set minimum CMake version
+cmake_minimum_required(VERSION 3.10)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Plugin source files
+set(PROJECT_SRCS
+    smooth-movement.cpp
+)
+
+# Define the plugin
+dfhack_plugin(smooth-movement ${PROJECT_SRCS})
+
+# Link required DFHack modules
+target_link_libraries(smooth-movement dfhack)
+
+# Install shader files
+install(FILES
+    smooth_movement.vert
+    smooth_movement.frag
+    DESTINATION hack/shaders
+)
+
+# Install configuration file
+install(FILES
+    smooth-movement.init
+    DESTINATION dfhack-config/init
+)

@@ -1,0 +1,39 @@
+# Smooth Movement Plugin - Auto-initialization Script
+# Place this file in: dfhack-config/init/smooth-movement.init
+
+# Enable the smooth movement plugin
+smooth-movement enable
+
+# Enable ghost trail for better movement prediction
+smooth-movement ghost on
+
+# Set interpolation speed (1.0 = default, 0.5 = slower/smoother, 2.0 = faster)
+# Adjust based on your FPS and game speed preferences
+smooth-movement speed 1.0
+
+# Optional: Reduce tracked units on lower-end systems
+# smooth-movement maxunits 300
+
+# Display status on load
+smooth-movement status
+
+# ===== PRESETS =====
+# Uncomment one of these sections for pre-configured settings
+
+# HIGH PERFORMANCE MODE (for lower-end systems)
+# smooth-movement enable
+# smooth-movement ghost off
+# smooth-movement speed 1.5
+# smooth-movement maxunits 200
+
+# MAXIMUM SMOOTHNESS MODE (for high-end systems)
+# smooth-movement enable
+# smooth-movement ghost on
+# smooth-movement speed 0.8
+# smooth-movement maxunits 800
+
+# ACCESSIBILITY MODE (optimized for visual tracking)
+# smooth-movement enable
+# smooth-movement ghost on
+# smooth-movement speed 0.9
+# smooth-movement maxunits 500
